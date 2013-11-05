@@ -16,21 +16,13 @@ public class LoginController {
     private TextField usuarioAdmin;
     @FXML
     private PasswordField senhaAdmin;
-    @FXML 
-    private TextField usuarioProfessor;
-    @FXML
-    private PasswordField senhaProfessor;
+  
     @FXML 
     private TextField raAluno;
-
-    @FXML
-    public void loginAdminAction(ActionEvent event) {
-    	close();
-    }
 	
     @FXML
-    public void loginProfessorAction(ActionEvent event) {
-    	StageGeneric stage = new StageGeneric("/br/com/curso/view/professor_lista.fxml");
+    public void loginAdminAction(ActionEvent event) {
+    	StageGeneric stage = new StageGeneric("/br/com/curso/view/aluno_lista.fxml");
     	stage.setLargura(600);
     	stage.setAltura(350);
     	stage.init();

@@ -12,7 +12,6 @@ public class Disciplina {
 	private String nome;
 	private List<Float> notas;
 	private List<Integer> faltas;
-	private Professor professor;
 	
 	
 	//Contrutor 
@@ -40,12 +39,6 @@ public class Disciplina {
 	}
 	public void setFaltas(List<Integer> faltas) {
 		this.faltas = faltas;
-	}
-	public Professor getProfessor() {
-		return professor;
-	}
-	public void setProfessor(Professor professor) {
-		this.professor = professor;
 	}
 	
 	

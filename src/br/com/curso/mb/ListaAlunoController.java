@@ -12,41 +12,37 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import br.com.curso.model.Professor;
+import br.com.curso.model.Aluno;
 import br.com.curso.view.StageGeneric;
 
-public class ListaProfessorController implements Initializable {
+public class ListaAlunoController implements Initializable {
      
     
 	@FXML
 	private AnchorPane root;
     @FXML
-    TableView<Professor> tabelaProfessor;
+    TableView<Aluno> tabelaAluno;
  
     @FXML
-    TableColumn<Professor,String> nome;
+    TableColumn<Aluno,String> nome;
     @FXML
-    TableColumn<Professor,String> disciplina;
-    @FXML
-    TableColumn<Professor,String> usuario;
- 
-    ObservableList<Professor> data;
+    TableColumn<Aluno,String> ra;
+
+    ObservableList<Aluno> data;
      
     @Override
     public void initialize(URL url, ResourceBundle rb) {
  
     	
-        nome.setCellValueFactory(new PropertyValueFactory<Professor,String>("nome"));
-        disciplina.setCellValueFactory(new PropertyValueFactory<Professor,String>("nomeDisciplina"));
-        usuario.setCellValueFactory(new PropertyValueFactory<Professor,String>("usuario"));
- 
+        nome.setCellValueFactory(new PropertyValueFactory<Aluno,String>("nome"));
+        ra.setCellValueFactory(new PropertyValueFactory<Aluno,String>("ra")); 
         data = FXCollections.observableArrayList();
-        tabelaProfessor.setItems(data);
+        tabelaAluno.setItems(data);
     }    
  
     @FXML
     private void adicionaAction(ActionEvent event) {
-    	StageGeneric stage = new StageGeneric("/br/com/curso/view/professor_cadastra.fxml");
+    	StageGeneric stage = new StageGeneric("/br/com/curso/view/aluno_cadastra.fxml");
     	stage.setLargura(315);
     	stage.setAltura(190);
     	stage.setPreviousController(this);
@@ -57,22 +53,25 @@ public class ListaProfessorController implements Initializable {
 	 private void apagaAction(ActionEvent event) { 
 
        //Seleciona a linha 
-       int selectedIndex = tabelaProfessor.getSelectionModel().getSelectedIndex(); 
+       int selectedIndex = tabelaAluno.getSelectionModel().getSelectedIndex(); 
        
        //Pega o registro 
-       Professor p = tabelaProfessor.getItems().get(selectedIndex); 
+       Aluno p = tabelaAluno.getItems().get(selectedIndex); 
        
        //Apaga a linha 
-       tabelaProfessor.getItems().remove(selectedIndex); 
+       tabelaAluno.getItems().remove(selectedIndex); 
        System.out.println(p.getNome()); 
     }
 
-	public ObservableList<Professor> getData() {
+	public ObservableList<Aluno> getData() {
 		return data;
 	}
 
-	public void setData(ObservableList<Professor> data) {
+	public void setData(ObservableList<Aluno> data) {
 		this.data = data;
 	} 	    
-    
+	 @FXML
+	    private void rgnotaAction(ActionEvent event) {
+	    	
+	    }
 }

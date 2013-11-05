@@ -39,7 +39,7 @@ public class CadastroProfessorController {
 	
 	private ObservableList<Professor> getTableProfessor() { 
         StageGeneric stage =  getStage(); 
-        ListaProfessorController controller = (ListaProfessorController) stage.getPreviousController(); 
+        ListaAlunoController controller = (ListaAlunoController) stage.getPreviousController(); 
         return controller.getData(); 
 	} 	
 	

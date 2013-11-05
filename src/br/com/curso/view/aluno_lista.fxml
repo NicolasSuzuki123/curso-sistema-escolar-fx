@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="350.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.curso.mb.ListaAlunoController">
+  <children>
+    <TableView id="itemTbl" fx:id="tabelaAluno" layoutX="14.0" layoutY="14.0" prefHeight="291.0" prefWidth="475.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="239.0" text="Aluno" fx:id="nome" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="236.0" text="R.A" fx:id="ra" />
+      </columns>
+    </TableView>
+    <Button id="button" fx:id="adiciona" layoutX="347.0" layoutY="315.0" onAction="#adicionaAction" text="Adiciona" />
+    <Button id="button" fx:id="apaga" layoutX="227.0" layoutY="315.0" onAction="#apagaAction" text="Apaga" />
+    <Button fx:id="rgnota" layoutX="471.0" layoutY="315.0" mnemonicParsing="false" onAction="#rgnotaAction" text="Registrar nota" />
+  </children>
+</AnchorPane>

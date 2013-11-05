@@ -11,6 +11,7 @@ import javafx.stage.Stage;
  * Esta classe representa a tela de login. Ela é a primeira classe a ser utilizada
  * pelo JavaFX, pois ela herda de Application, e contém o "main" do programa.
  * 
+ *
  * @author Marcelo
  *
  */
